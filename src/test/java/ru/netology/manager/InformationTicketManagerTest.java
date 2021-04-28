@@ -9,7 +9,6 @@ import ru.netology.comparator.TicketByTimeComparator;
 import ru.netology.domain.InformationTicket;
 import ru.netology.repository.InformationTicketRepository;
 
-import java.util.Arrays;
 import java.util.Comparator;
 
 import static org.junit.jupiter.api.Assertions.*;
