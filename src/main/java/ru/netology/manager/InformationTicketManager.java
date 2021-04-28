@@ -3,6 +3,8 @@ package ru.netology.manager;
 import ru.netology.domain.InformationTicket;
 import ru.netology.repository.InformationTicketRepository;
 
+import java.util.Arrays;
+
 public class InformationTicketManager {
     private InformationTicketRepository repository;
 
@@ -25,6 +27,7 @@ public class InformationTicketManager {
                 index++;
             }
         }
+        Arrays.sort(result);
         return result;
     }
 }
