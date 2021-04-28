@@ -28,8 +28,6 @@ public class InformationTicketManager {
                 index++;
             }
         }
-        Arrays.sort(result);
-        Arrays.sort(result, comparator);
         return result;
     }
 }
