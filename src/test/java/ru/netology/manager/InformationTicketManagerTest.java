@@ -33,8 +33,6 @@ class InformationTicketManagerTest {
         doReturn(returned).when(repository).searchAll();
         Comparator<InformationTicket> comparator = new TicketByTimeComparator();
         InformationTicket[] actual = manager.findAll("ABC", "ABL", comparator);
-        Arrays.sort(actual);
-        Arrays.sort(actual, comparator);
         InformationTicket[] expected = new InformationTicket[]{ticket4};
         assertArrayEquals(expected, actual);
     }
@@ -46,8 +44,6 @@ class InformationTicketManagerTest {
         doReturn(returned).when(repository).searchAll();
         Comparator<InformationTicket> comparator = new TicketByTimeComparator();
         InformationTicket[] actual = manager.findAll("ABC", "ABD", comparator);
-        Arrays.sort(actual);
-        Arrays.sort(actual, comparator);
         InformationTicket[] expected = new InformationTicket[]{ticket3, ticket5, ticket2, ticket1};
         assertArrayEquals(expected, actual);
     }
@@ -59,7 +55,6 @@ class InformationTicketManagerTest {
         doReturn(returned).when(repository).searchAll();
         Comparator<InformationTicket> comparator = new TicketByTimeComparator();
         InformationTicket[] actual = manager.findAll("ABL", "ABD", comparator);
-        Arrays.sort(actual, comparator);
         InformationTicket[] expected = new InformationTicket[]{};
         assertArrayEquals(expected, actual);
     }
